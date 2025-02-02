@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2.1.0
 
     - name: Deploy to IPFS
       uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.4
