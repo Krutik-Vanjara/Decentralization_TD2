@@ -11,11 +11,12 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2.1.0
+      uses: actions/checkout@v2
 
     - name: Deploy to IPFS
-      uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.4
+      uses: aquiladev/ipfs-action@v0.2.0
       with:
-        pinata-api-key: ${{ secrets.PINATA_API_KEY }}
-        pinata-secret-api-key: ${{ secrets.PINATA_SECRET_API_KEY }}
         path: '.'
+        service: pinata
+        pinataKey: ${{ secrets.PINATA_API_KEY }}
+        pinataSecret: ${{ secrets.PINATA_SECRET_API_KEY }}
