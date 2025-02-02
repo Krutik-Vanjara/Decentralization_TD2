@@ -16,6 +16,6 @@ jobs:
     - name: Deploy to IPFS
       uses: popovoleksandr/ipfs-pinata-deploy-action@v1
       with:
-        pinata-api-key: ${{ secrets.9680db500edde87dec29 }}
-        pinata-secret-api-key: ${{ secrets.9680db500edde87dec29 }}
+        pinata-api-key: ${{ secrets.PINATA_API_KEY }}
+        pinata-secret-api-key: ${{ secrets.PINATA_SECRET_API_KEY }}
         path: '.'
