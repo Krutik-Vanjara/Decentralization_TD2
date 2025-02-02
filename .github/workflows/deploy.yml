@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
 
       - name: Deploy to IPFS
-        uses: popovoleksandr/ipfs-pinata-deploy-action@v2  # Update the version here
+        uses: popovoleksandr/ipfs-pinata-deploy-action@v1  # Update the version here
         with:
           pinata_api_key: ${{ secrets.PINATA_API_KEY }}
           pinata_secret_api_key: ${{ secrets.PINATA_SECRET_API_KEY }}
