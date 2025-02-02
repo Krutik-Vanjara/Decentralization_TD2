@@ -16,6 +16,7 @@ jobs:
     - name: Deploy to IPFS
       uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.4
       with:
-        pinata-api-key: ${{ secrets.PINATA_API_KEY }}
-        pinata-secret-api-key: ${{ secrets.PINATA_SECRET_API_KEY }}
         path: '.'
+        service: pinata
+        pinataKey: ${{ secrets.PINATA_API_KEY }}
+        pinataSecret: ${{ secrets.PINATA_SECRET_API_KEY }}
