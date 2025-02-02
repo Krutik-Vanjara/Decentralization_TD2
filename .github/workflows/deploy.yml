@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Deploy to IPFS
-      uses: popovoleksandr/ipfs-pinata-deploy-action@v1
-      with:
-        pinata-api-key: ${{ secrets.PINATA_API_KEY }}
-        pinata-secret-api-key: ${{ secrets.PINATA_SECRET_API_KEY }}
-        path: '.'
+      - name: Deploy to IPFS
+        uses: popovoleksandr/ipfs-pinata-deploy-action@v2  # Update the version here
+        with:
+          pinata_api_key: ${{ secrets.PINATA_API_KEY }}
+          pinata_secret_api_key: ${{ secrets.PINATA_SECRET_API_KEY }}
+          directory: ./build
