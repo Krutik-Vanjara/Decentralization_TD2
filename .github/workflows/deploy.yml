@@ -19,3 +19,5 @@ jobs:
         pinata-api-key: ${{ secrets.PINATA_API_KEY }}
         pinata-secret-api-key: ${{ secrets.PINATA_SECRET_API_KEY }}
         path: '.'
+        verbose: true
+        remove-old: false
