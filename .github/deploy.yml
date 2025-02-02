@@ -1,0 +1,21 @@
+name: Deploy to IPFS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Deploy to IPFS
+      uses: popovoleksandr/ipfs-pinata-deploy-action@v1
+      with:
+        pinata-api-key: ${{ secrets.9680db500edde87dec29 }}
+        pinata-secret-api-key: ${{ secrets.9680db500edde87dec29 }}
+        path: '.'
